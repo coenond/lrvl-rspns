@@ -9,5 +9,10 @@
             "email": "coenonderwater@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "coenond\\LrvlRspns\\": "src"
+        }
+    },
 }
