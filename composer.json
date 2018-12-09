@@ -1,0 +1,18 @@
+{
+    "name": "coenond/lrvl-rspns",
+    "description": "A simple package for Laravel that helps you standardize your HTTP responses.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Coen Onderwater",
+            "email": "coenonderwater@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "coenond\\LrvlRspns\\": "src"
+        }
+    },
+}
