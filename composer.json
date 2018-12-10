@@ -14,12 +14,5 @@
         "files": [
             "src/helpers.php"
         ]
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "coenond\\LrvlRspns\\LrvlRspnsServiceProvider"
-            ]
-        }
     }
 }
