@@ -90,4 +90,18 @@ public class LrvlRspnss
 
 		return response()->json($data, Response::HTTP_UNAUTHORIZED);
 	}
+
+	/**
+	 * Response NOT_FOUND 404
+	 * @param  array  $data 
+	 */
+	public function notFound($data = []): JsonResponse
+	{
+		$response = [
+			"status" => "error",
+			"data" => $data
+		];
+
+		return response()->json($data, Response::HTTP_NOT_FOUND);
+	}
 }
