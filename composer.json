@@ -14,5 +14,12 @@
         "psr-4": {
             "coenond\\LrvlRspns\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "coenond\\LrvlRspns\\LrvlRspnsServiceProvider"
+            ]
+        }
     }
 }
