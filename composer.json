@@ -11,9 +11,9 @@
     ],
     "require": {},
     "autoload": {
-        "psr-4": {
-            "coenond\\LrvlRspns\\": "src"
-        },
+        // "psr-4": {
+        //     "coenond\\LrvlRspns\\": "src"
+        // },
         "files": [
             "src/helpers.php"
         ]
