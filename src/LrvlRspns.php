@@ -104,4 +104,18 @@ public class LrvlRspnss
 
 		return response()->json($data, Response::HTTP_NOT_FOUND);
 	}
+
+	/**
+	 * Response METHOD_NOT_ALLOWED 405
+	 * @param  array  $data 
+	 */
+	public function methodNotAllowed($data = []): JsonResponse
+	{
+		$response = [
+			"status" => "error",
+			"data" => $data
+		];
+
+		return response()->json($data, Response::HTTP_METHOD_NOT_ALLOWED);
+	}
 }
