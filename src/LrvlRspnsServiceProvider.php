@@ -3,7 +3,7 @@ namespace coenond\LrvlRspns;
 
 use Illuminate\Support\ServiceProvider;
 
-class MyPackageServiceProvider extends ServiceProvider
+class LrvlRspnsServiceProvider extends ServiceProvider
 {
 	/**
 	 * Bootstrap the application services.
