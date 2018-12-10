@@ -5,7 +5,7 @@ namespace coenond\LrvlRspns;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
-public class LrvlRspnss
+public class LrvlRspns
 {
 	/**
 	 * Response OK 200
