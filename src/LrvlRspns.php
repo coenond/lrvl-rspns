@@ -5,13 +5,13 @@ namespace coenond\LrvlRspns;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
-class LrvlRspnss
+public class LrvlRspnss
 {
 	/**
 	 * Response OK 200
 	 * @param  array  $data 
 	 */
-	function ok($data = []): JsonResponse
+	public function ok($data = []): JsonResponse
 	{
 		$response = [
 			"status" => "success",
@@ -25,7 +25,7 @@ class LrvlRspnss
 	 * Response CREATED 201
 	 * @param  array  $data 
 	 */
-	function created($data = []): JsonResponse
+	public function created($data = []): JsonResponse
 	{
 		$response = [
 			"status" => "success",
@@ -39,7 +39,7 @@ class LrvlRspnss
 	 * Response ACCEPTED 202
 	 * @param  array  $data 
 	 */
-	function accepted($data = []): JsonResponse
+	public function accepted($data = []): JsonResponse
 	{
 		$response = [
 			"status" => "success",
@@ -53,7 +53,7 @@ class LrvlRspnss
 	 * Response NO_CONTENT 204
 	 * @param  array  $data 
 	 */
-	function noContent($data = []): JsonResponse
+	public function noContent($data = []): JsonResponse
 	{
 		$response = [
 			"status" => "success",
@@ -67,7 +67,7 @@ class LrvlRspnss
 	 * Response BAD_REQUEST 400
 	 * @param  array  $data 
 	 */
-	function badRequest($data = []): JsonResponse
+	public function badRequest($data = []): JsonResponse
 	{
 		$response = [
 			"status" => "error",
@@ -81,7 +81,7 @@ class LrvlRspnss
 	 * Response UNAUTHORIZED 401
 	 * @param  array  $data 
 	 */
-	function unauthorized($data = []): JsonResponse
+	public function unauthorized($data = []): JsonResponse
 	{
 		$response = [
 			"status" => "error",
