@@ -5,7 +5,9 @@ A simple helper package for Laravel that helps you standardize your HTTP respons
 
 The helper includes multiple functions that returns a Json Response. Each function is already defined with the correct HTTP Status code.
 
-Simply add this package to your Laravel project by running `composer require coenond/lrvl-rspns`
+Simply add this package to your Laravel project by running:
+
+`composer require coenond/lrvl-rspns`
 
 ## Example Usage
 The helper methodes can be used in controllers. For example in the User controller:
@@ -36,7 +38,7 @@ public function create(Request $request)
         return rspns_bad_request($request->all(), "User already exists");
     }
     
-    $user = User::create(['email'	=> $email, 'password' => $password]);
+    $user = User::create(['email' => $email, 'password' => $password]);
 
     return rspns_created($user);
 }
@@ -101,3 +103,8 @@ The `2xx` (success) responses are defined with the status `success` and has an o
 The `4xx` and `5xx` responses are defined with the status `success` and has an optional data object and message parameter.
 
 NOTE: Unfortunately, PHP doesn't support named parameters, so if you want to return an error message *without data* is should be return like: `return rspns_bad_request(null, 'some messsage here');`
+
+## Contribution is always welcome :)
+I developed this package as a 'scratch my own itch' solution. Feel free to open a Pull Request for message me for any suggestions. 
+
+:beer: Cheers!
