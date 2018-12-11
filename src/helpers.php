@@ -96,7 +96,7 @@ if (!function_exists("rspns_method_not_allowed")) {
 	function rspns_method_not_allowed($data = [], $message = ""): JsonResponse
 	{
 		$response = [ "status" => "error", "data" => $data, "message" => $message ];
-		return response()->json($response, Response::HTTP_METHOD_NOT_ALLOWED) }
+		return response()->json($response, Response::HTTP_METHOD_NOT_ALLOWED);
 	}
 }	
 
