@@ -42,7 +42,7 @@ if (!function_exists("rspns_accepted")) {
 if (!function_exists("rspns_no_content")) {
 	/**
 	 * Response NO_CONTENT 204
-	 * @param  array  $data 
+	 * @param  array  $data
 	 */
 	function rspns_no_content($data = []): JsonResponse
 	{
@@ -54,9 +54,10 @@ if (!function_exists("rspns_no_content")) {
 if (!function_exists("rspns_bad_request")) {
 	/**
 	 * Response BAD_REQUEST 400
-	 * @param  array  $data 
+	 * @param  array  $data
+	 * @param  string $message
 	 */
-	function rspns_bad_request($data = []): JsonResponse
+	function rspns_bad_request($data = [], $message = ""): JsonResponse
 	{
 		$response = [ "status" => "error", "data" => $data, "message" => $message ];
 		return response()->json($response, Response::HTTP_BAD_REQUEST);
@@ -66,9 +67,10 @@ if (!function_exists("rspns_bad_request")) {
 if (!function_exists("rspns_unauthorized")) {
 	/**
 	 * Response UNAUTHORIZED 401
-	 * @param  array  $data 
+	 * @param  array  $data
+	 * @param  string $message
 	 */
-	function rspns_unauthorized($data = []): JsonResponse
+	function rspns_unauthorized($data = [], $message = ""): JsonResponse
 	{
 		$response = [ "status" => "error", "data" => $data, "message" => $message ];
 		return response()->json($response, Response::HTTP_UNAUTHORIZED);
@@ -78,9 +80,10 @@ if (!function_exists("rspns_unauthorized")) {
 if (!function_exists("rspns_not_found")) {
 	/**
 	 * Response NOT_FOUND 404
-	 * @param  array  $data 
+	 * @param  array  $data
+	 * @param  string $message
 	 */
-	function rspns_not_found($data = []): JsonResponse
+	function rspns_not_found($data = [], $message = ""): JsonResponse
 	{
 		$response = [ "status" => "error", "data" => $data, "message" => $message ];
 		return response()->json($response, Response::HTTP_NOT_FOUND);
@@ -109,7 +112,7 @@ if (!function_exists("rspns_internal_server_error")) {
 	function rspns_internal_server_error($data = [], $message = ""): JsonResponse
 	{
 		$response = [ "status" => "error", "data" => $data, "message" => $message ];
-		return response()->json($response, Response::HTTP_INTERNAL_SERVER_ERROR) }
+		return response()->json($response, Response::HTTP_INTERNAL_SERVER_ERROR);
 	}
 }
 
@@ -122,7 +125,7 @@ if (!function_exists("rspns_not_implemented")) {
 	function rspns_not_implemented($data = [], $message = ""): JsonResponse
 	{
 		$response = [ "status" => "error", "data" => $data, "message" => $message ];
-		return response()->json($response, Response::HTTP_NOT_IMPLEMENTED) }
+		return response()->json($response, Response::HTTP_NOT_IMPLEMENTED);
 	}
 }
 
@@ -135,6 +138,6 @@ if (!function_exists("rspns_bad_gateway")) {
 	function rspns_bad_gateway($data = [], $message = ""): JsonResponse
 	{
 		$response = [ "status" => "error", "data" => $data, "message" => $message ];
-		return response()->json($response, Response::HTTP_BAD_GATEWAY) }
+		return response()->json($response, Response::HTTP_BAD_GATEWAY);
 	}
 }
