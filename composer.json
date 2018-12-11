@@ -9,10 +9,18 @@
             "email": "coenonderwater@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^7.5",
+        "orchestra/testbench": "^3.7"
+    },
     "autoload": {
         "files": [
             "src/helpers.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "coenond\\LrvlRspns\\Test\\": "tests/"
+        }
     }
 }
